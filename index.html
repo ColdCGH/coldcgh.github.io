@@ -1,23 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Personal Page</title>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <!-- 引入 Bootstrap CSS 文件 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<h1>Hello, World!</h1>
-<p>My name is binjie.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">My Blog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-<button id="request-btn">Make Request</button>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active">Category 1</a>
+                <a href="#" class="list-group-item list-group-item-action">Article 1</a>
+                <a href="#" class="list-group-item list-group-item-action">Article 2</a>
+            </div>
+            <div class="list-group mt-4">
+                <a href="#" class="list-group-item list-group-item-action active">Category 2</a>
+                <a href="#" class="list-group-item list-group-item-action">Article 3</a>
+                <a href="#" class="list-group-item list-group-item-action">Article 4</a>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <h1>Welcome to My Blog</h1>
+            <p>This is my personal blog where I share my thoughts and ideas.</p>
+            <h2>Latest Articles</h2>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Article 1</h5>
+                    <p class="card-text">This is the content of article 1.</p>
+                </div>
+            </div>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">Article 2</h5>
+                    <p class="card-text">This is the content of article 2.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<script>
-    $(document).ready(function() {
-        $('#request-btn').click(function() {
-            $.get('https://jsonplaceholder.typicode.com/todos/1', function(data) {
-                alert('Title: ' + data.title);
-            });
-        });
-    });
-</script>
+<!-- 引入 jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- 引入 Bootstrap JS 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
