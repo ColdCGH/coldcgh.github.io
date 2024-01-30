@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>ColdCGH的主页</title>
+    <title>My Personal Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 </head>
 <body>
-    <span>hello</span>
+<h1>Hello, World!</h1>
+<p>My name is binjie.</p>
+
+<button id="request-btn">Make Request</button>
+
+<script>
+    $(document).ready(function() {
+        $('#request-btn').click(function() {
+            $.get('https://jsonplaceholder.typicode.com/todos/1', function(data) {
+                alert('Title: ' + data.title);
+            });
+        });
+    });
+</script>
 </body>
 </html>
